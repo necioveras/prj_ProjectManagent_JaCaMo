@@ -6,11 +6,12 @@ import models.Project;
 import cartago.Artifact;
 import cartago.OPERATION;
 import cartago.OpFeedbackParam;
+import dao.DAODotProject;
 import dao.DAOGeneric;
 
 public class EnvironmentDataProjects extends Artifact {
 	
-    private DAOGeneric dao = new DAOGeneric();
+    private DAOGeneric dao = new DAODotProject();
 	
 	private Object updateVal(){
 		return dao.countProjectsInProgress();
